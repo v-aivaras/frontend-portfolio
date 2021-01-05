@@ -37,6 +37,11 @@ header {
     position: fixed;
     width: 100%;
     z-index: 99;
+    transition: 0.4s;
+}
+
+#header:hover {
+    background-color: #3d405be5;
 }
 
 #header.open #navigation {
@@ -50,7 +55,6 @@ header {
 
 #header.scrolled {
     background-color: #3d405b;
-    background-color: #3d405b;
 }
 
 #logo {
@@ -61,15 +65,13 @@ header {
 
 #logo a {
     font-size: 1.5rem;
-    padding: 20px;
 }
 
 #nav-toggle {
-    width: 70px;
+    width: 25%;
     display: inline-block;
     font-size: 1.5rem;
-    text-align: center;
-    padding: 10px;
+    text-align: right;
     border-radius: 10px;
 }
 
@@ -101,7 +103,7 @@ header a {
 
 /* Intro */
 #intro {
-    min-height: 500px;
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -146,4 +148,91 @@ header a {
 
 .btn i {
     padding-right: 10px;
+}
+
+/* About me  */
+#about-me {
+    min-height: 100vh;
+    padding: 20px 0;
+    color: #fff;
+    background-color: #3d405bde;
+    text-align: center;
+}
+
+#about-me img {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 4px;
+}
+.whoiam-text h3 {
+    padding: 15px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.whoiam-text p {
+    text-align: justify;
+}
+
+/* Services  */
+#services {
+    min-height: 100vh;
+    margin: 40px 0;
+    padding: px 0;
+    color: #fff;
+    background-color: #3d405bde;
+    text-align: center;
+}
+
+#services h2 {
+    padding: 15px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.service {
+    margin: 20px 0;
+    text-align: center; 
+}
+
+.service:hover .service-icon {
+    outline: 5px solid #e07a5f;
+    background-color: #e07a5f;
+    outline-offset: 5px;
+}
+
+.service:hover .service-title {
+    color: #e07a5f;
+}
+
+.service:hover .service-desc {
+    opacity: 1;
+}
+
+.service-icon {
+    font-size: 3.5rem;
+    margin: 35px 0; 
+    background-color: rgba(0,0,0,0.1);
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    padding: 20px;
+    transform: rotate(45deg);
+    transition: background-color 0.4s, outline 0.4s, outline-offset 0.4s;
+    outline: 5px solid transparent;
+    outline-offset: 0px;
+}
+
+.service-icon i {
+    transform: rotate(-45deg);
+}
+
+.service-title {
+    padding: 20px 0;
+    font-size: 1.6rem;
+}
+
+.service-desc {
+    opacity: 0;
+    transition: 0.4s;
 }
