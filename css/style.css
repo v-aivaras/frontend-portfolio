@@ -10,6 +10,10 @@ ul {
 
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #3d405b;
+    background-image: linear-gradient(rgba(61, 64, 91, 0.9), rgba(61, 64, 91, 0.1)), url(../images/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 img {
@@ -20,10 +24,19 @@ a {
     text-decoration: none;
 }
 
+.container {
+    padding: 15px;
+    max-width: 1100px;
+    margin: auto;
+}
+
 /* header */
 header {
     color: #fff;
     transition: background-color 0.3s;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
 }
 
 #header.open #navigation {
@@ -43,6 +56,7 @@ header {
 #logo {
     width: 70%;
     display: inline-block;
+    font-weight: 900;
 }
 
 #logo a {
@@ -69,16 +83,67 @@ header a {
     width: 300px;
     background-color: #3d405b;
     position: absolute;
+    left: 0;
     min-height: 100vh;
-    transform: translateX(-300px);
+    transform: translateX(-1000px);
     transition: transform 0.4s;
 }
 
 #navigation a {
     display: block;
     opacity: 0.8;
+    text-transform: uppercase;
 }
 
 #navigation a:hover {
     opacity:  1;
+}
+
+/* Intro */
+#intro {
+    min-height: 500px;
+    text-align: center;
+}
+
+.intro-text {
+    position: relative;
+    top: 100px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.intro-text h1 strong,
+.intro-text h1 em {
+    font-size: 2rem;
+    padding: 5px;
+    display: block;
+    color: #e07a5f;
+    text-transform: uppercase;
+}
+
+.call-to-action {
+    margin: 30px 10px;
+}
+
+.btn {
+    padding: 14px;
+    border: none;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.btn-highlight {
+    color: #fff;
+    background-color: #e07a5f;
+}
+
+.intro-text .btn {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.btn i {
+    padding-right: 10px;
 }
