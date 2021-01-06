@@ -42,7 +42,7 @@ header {
 }
 
 #header:hover {
-    background-color: #3d405bfd;
+    background-color: #3d405b;
 }
 
 #header.open #navigation {
@@ -402,10 +402,6 @@ form button {
     text-align: center;
 }
 
-#footer .social-links {
-    margin: 10px;
-}
-
 #footer .link {
     display: inline-block;
     font-size: 1.2rem;
@@ -426,4 +422,56 @@ form button {
 
 #footer .link:hover i {
     color: #e07a5f;
+}
+
+/* Media query for tablets */
+@media screen and (min-width: 750px) {
+    #logo {
+        width: 25%;
+    }
+
+    #nav-toggle {
+        display: none;
+    }
+
+    #navigation {
+        transform: translateX(0px);
+        width: 74%;
+        background-color: inherit;
+        position: static;
+        display: inline-block;
+        text-align: center;
+        min-height: auto;
+    }
+
+    #navigation li {
+        display: inline-block;
+        margin-right: 1%;
+    }
+
+    #service-container,
+    .projects-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #service-container h2,
+    .projects-container h2 {
+        display: block;
+        width: 100%;
+    }
+
+    .service,
+    .project {
+        width: 48%;
+        margin: 1%;
+    }
+}
+
+/* Media query for desktop */
+@media screen and (min-width: 1000px) {
+    .service,
+    .project {
+        width: 30%;
+    }
 }
